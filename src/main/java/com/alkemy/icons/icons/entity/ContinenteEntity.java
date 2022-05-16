@@ -2,7 +2,7 @@ package com.alkemy.icons.icons.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.boot.autoconfigure.web.WebProperties;
+
 
 
 import javax.persistence.*;

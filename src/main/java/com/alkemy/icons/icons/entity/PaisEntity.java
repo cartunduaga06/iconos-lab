@@ -1,6 +1,7 @@
 package com.alkemy.icons.icons.entity;
 
 
+import com.sun.xml.bind.annotation.OverrideAnnotationOf;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.autoconfigure.web.WebProperties;
@@ -46,6 +47,17 @@ public class PaisEntity {
             inverseJoinColumns = @JoinColumn(name = "icon_id")
     )
     private Set<IconEntity> icons = new HashSet<>();
+
+    @Override
+
+    public boolean equals(Object obj) {
+        if(obj == null)
+            return false;
+        if(getClass() != obj.getClass())
+            return false;
+        final PaisEntity other = (PaisEntity) obj;
+        return other.id == this.id;
+    }
 
 
 }
